@@ -23,7 +23,15 @@ public class ProducerDemo {
         KafkaProducer<String, String> producer = new KafkaProducer<>(prop);
 
         // Create a producer record
+        ProducerRecord<String, String> record = new ProducerRecord<>("first_topic", "hello world");
+
         // Send data
-                producer.send()
+        producer.send(record);
+
+        // Fluxh data
+        producer.flush();
+
+        // Flush & close the producer
+        producer.close();
     }
 }
