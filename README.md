@@ -20,6 +20,3 @@ kafka-topics --zookeeper 127.0.0.1:2181 --topic topic_name --describe
         
 - Delete kafka topic:
 kafka-topics --zookeeper 127.0.0.1:2181 --topic topic_name --delete
-        
-## Actual progress: 
-- Episode 46: Demo producer with callback. 
