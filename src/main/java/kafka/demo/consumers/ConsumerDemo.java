@@ -21,7 +21,7 @@ public class ConsumerDemo
 
         String boostrapServers = "127.0.0.1:9092";
         String groupId = "my-fourth-application";
-        String topic = "first_topic";
+        String topic = "real_topic";
 
         // Create consumer config
         Properties prop = new Properties();
@@ -36,6 +36,7 @@ public class ConsumerDemo
             - None: Will throw an error.
          */
         prop.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+
 
         // Create consumer
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(prop);
